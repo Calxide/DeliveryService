@@ -1,0 +1,85 @@
+{
+  "hash": "cd41253e",
+  "configHash": "f51889be",
+  "lockfileHash": "dc808d19",
+  "browserHash": "623ff7bd",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "8c4cac9d",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "2a7861f7",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "a66f8daa",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "179fc7b9",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "baebdb8e",
+      "needsInterop": false
+    },
+    "@angular/platform-server": {
+      "src": "../../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
+      "file": "@angular_platform-server.js",
+      "fileHash": "af15a225",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "98fa3952",
+      "needsInterop": false
+    },
+    "rxjs": {
+      "src": "../../../../../../node_modules/rxjs/dist/cjs/index.js",
+      "file": "rxjs.js",
+      "fileHash": "94679476",
+      "needsInterop": true
+    },
+    "socket.io-client": {
+      "src": "../../../../../../node_modules/socket.io-client/build/esm-debug/index.js",
+      "file": "socket__io-client.js",
+      "fileHash": "0cff45ca",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "xhr2-RCJP3FMG": {
+      "file": "xhr2-RCJP3FMG.js"
+    },
+    "chunk-S2WGDOTH": {
+      "file": "chunk-S2WGDOTH.js"
+    },
+    "chunk-KYVJOXAZ": {
+      "file": "chunk-KYVJOXAZ.js"
+    },
+    "chunk-DUNYNVLA": {
+      "file": "chunk-DUNYNVLA.js"
+    },
+    "chunk-RXRKFATN": {
+      "file": "chunk-RXRKFATN.js"
+    },
+    "chunk-3CUTSYCL": {
+      "file": "chunk-3CUTSYCL.js"
+    },
+    "chunk-LDODSSGN": {
+      "file": "chunk-LDODSSGN.js"
+    }
+  }
+}

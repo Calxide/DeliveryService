@@ -1,0 +1,56 @@
+<div class="container">
+  <h4>Package List</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Package ID (MongoDB)</th>
+        <th>Title</th>
+        <th>Weight (g)</th>
+        <th>Destination</th>
+        <th>Description</th>
+        <th>Driver ID (MongoDB)</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pkg of packages">
+        <td>{{ pkg._id }}</td>
+        <td>{{ pkg.package_title }}</td>
+        <td>{{ pkg.package_weight | kgToG }}</td>
+        <td>{{ pkg.package_destination }}</td>
+        <td>{{ pkg.package_description }}</td>
+        <td>{{ pkg.driver_id }}</td>
+        <td>
+          <button *ngIf="pkg && pkg._id" (click)="toggleDrivers(pkg._id.toString())" class="btn btn-info">?</button>
+          <button (click)="deletePackage(pkg)" class="btn btn-danger">X</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="selectedPackageId">
+    <h5>Drivers for Package ID: {{ selectedPackageId }}</h5>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Driver Name</th>
+                <th>Department</th>
+                <th>License</th>
+                <th>Is Active?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let driver of assignedDrivers">
+              <td>{{ driver.driver_name | uppercase }}</td>
+                <td>{{ driver.driver_department }}</td>
+                <td>{{ driver.driver_license }}</td>
+                <td>{{ driver.driver_is_active }}</td>
+            </tr>
+            <tr *ngIf="assignedDrivers.length === 0">
+                <td colspan="4">No Drivers Found</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
+</div>

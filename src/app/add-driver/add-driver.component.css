@@ -1,0 +1,18 @@
+.container {
+  padding-top: 15px; /* Adds space at the top */
+  padding-bottom: 10px; /* Adds space at the top */
+}
+
+.driver-form-name,
+.driver-form-department,
+.driver-form-license,
+.driver-checkbox {
+  margin-bottom: 15px;
+}
+
+.driver-form-name label,
+.driver-form-department label,
+.driver-form-license label,
+.driver-checkbox label {
+  font-weight: bold;
+}

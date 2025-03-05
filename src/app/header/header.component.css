@@ -1,0 +1,8 @@
+.delivery-brand {
+    margin-left: 5px; /* Moves "Delivery Service" text 5px to the right */
+}
+
+.custom-navbar .navbar-nav .nav-link, 
+.custom-navbar .navbar-brand {
+    margin-left: 10px; /* Moves all navbar text 5px to the right */
+}

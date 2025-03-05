@@ -1,0 +1,20 @@
+.home-container {
+    margin-top: 50px; /* Add space above the title */
+}
+
+.home-title {
+    font-size: 28px; /* Bigger text */
+    font-weight: bold; /* Make it stand out */
+    color: rgba(69, 69, 146, 0.836); /* Make it blue */
+}
+
+.home-subtext {
+    font-size: 18px; /* Smaller text */
+    font-weight: normal; /* Keep it readable */
+    color: black; /* Standard color */
+    text-align: center; /* Center it */
+}
+
+.container {
+    padding-bottom: 150px; /* Pushes content down */
+}

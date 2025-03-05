@@ -1,0 +1,7 @@
+.container {
+    padding-top: 15px; /* Adds space at the top */
+    padding-bottom: 10px; /* Adds space at the top */
+  }
+  .container {
+    padding-bottom: 270px; /* Pushes content down */
+}

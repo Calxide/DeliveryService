@@ -1,0 +1,16 @@
+<div class="container">
+    <h3>Delete Package</h3>
+    <div class="form-group">
+      <label for="packageId">Package ID:</label>
+      <input
+        type="text"
+        id="packageId"
+        class="form-control"
+        [(ngModel)]="packageId"
+        placeholder="Enter Package ID"
+        required
+      />
+    </div>
+    <button (click)="deletePackage()" class="btn btn-danger mt-3">Delete Package</button>
+  </div>
+  

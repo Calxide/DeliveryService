@@ -1,0 +1,18 @@
+html, body {
+    height: 100%; /* Ensure full height for the body */
+    margin: 0; /* Remove default margin */
+}
+
+body {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.container {
+    flex: 1; /* Allow the container to grow */
+    padding: 10px; /* Add some padding around the form */
+    overflow-y: auto; /* Enable scrolling if content exceeds the height */
+    /* Use calc to ensure it takes space for the footer */
+    min-height: 2px; /* Adjust this based on the height of your footer */
+}
+

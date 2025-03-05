@@ -1,0 +1,52 @@
+<div class="container">
+  <h4>Package List for Translation</h4>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Package ID</th>
+        <th>Title</th>
+        <th>Weight (g)</th>
+        <th>Destination</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pkg of packages">
+        <td>{{ pkg._id }}</td>
+        <td>{{ pkg.package_title }}</td>
+        <td>{{ pkg.package_weight | kgToG }}</td>
+        <td>{{ pkg.package_destination }}</td>
+        <td>
+          <ng-container *ngIf="pkg.package_description; else undefinedDescription">
+            {{ pkg.package_description }}
+          </ng-container>
+          <ng-template #undefinedDescription>
+            <span class="text-danger">No Description</span>
+          </ng-template>
+        </td>
+        <td>
+          <select [(ngModel)]="targetLanguage">
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="zh">Chinese</option>
+            <!-- Add more languages as needed -->
+          </select>
+          <button (click)="translateDescription(pkg.package_description)" class="btn btn-primary" [disabled]="!pkg.package_description">Translate</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="translatedDescriptions">
+    <h5>Translated Descriptions:</h5>
+    <ul>
+      <li *ngFor="let pkg of packages">
+        <strong>{{ pkg.package_title }}:</strong>
+        <p *ngIf="pkg.package_description && translatedDescriptions[pkg.package_description]">
+          {{ translatedDescriptions[pkg.package_description] }}
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>

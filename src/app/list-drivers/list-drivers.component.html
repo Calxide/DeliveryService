@@ -1,0 +1,53 @@
+<div class="container">
+    <h4>Driver List</h4>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>License</th>
+                <th>Is Active?</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let driver of drivers">
+                <td>{{ driver._id }}</td> 
+                <td>{{ driver.driver_name | uppercase }}</td>
+                <td>{{ driver.driver_department }}</td>
+                <td>{{ driver.driver_license }}</td>
+                <td>{{ driver.driver_is_active }}</td> 
+                <td>
+                    <!-- Only show the button if driver._id is defined -->
+                    <button *ngIf="driver._id" (click)="togglePackages(driver._id.toString())" class="btn btn-info">?</button>
+                    <button (click)="deleteDriver(driver)" class="btn btn-danger">X</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="selectedDriverId">
+        <h5>Packages for Driver ID: {{ selectedDriverId }}</h5>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Package Title</th>
+                    <th>Weight (g)</th>
+                    <th>Destination</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let pkg of assignedPackages">
+                    <td>{{ pkg.package_title }}</td>
+                    <td>{{ pkg.package_weight * 1000 }}g</td>
+                    <td>{{ pkg.package_destination }}</td>
+                </tr>
+                <tr *ngIf="assignedPackages.length === 0">
+                    <td colspan="3">No Packages Found</td>
+                </tr>
+            </tbody>
+        </table>
+        <div *ngIf="noPackagesMessage">{{ noPackagesMessage }}</div> <!-- Display the message -->
+    </div>
+</div>
